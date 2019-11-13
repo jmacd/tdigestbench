@@ -32,7 +32,7 @@ bench:
 
 # The exact version of CI tools should be specified in your go.mod file and referenced inside your tools.go file
 setup_ci:
-	go install github.com/cep21/benchdraw
+	go install github.com/jmacd/benchdraw
 	go install github.com/golangci/golangci-lint/cmd/golangci-lint
 
 # Generate benchmarks and save them to a file for 'draw'

@@ -11,6 +11,7 @@ import (
 
 	caiot "github.com/caio/go-tdigest"
 	influx "github.com/influxdata/tdigest"
+	lightstep "github.com/lightstep/sandbox/jmacd/tdigest"
 	segmentio "github.com/segmentio/tdigest"
 )
 
@@ -238,6 +239,16 @@ var digests = []digestRun{
 		digest: func() commonTdigest {
 			td := influx.New()
 			return &influxTdigest{t: td}
+		},
+	},
+	{
+		name: "lightstep",
+		digest: func() commonTdigest {
+			return lightstep.NewStream(lightstep.NewConfig(
+				1000,
+				10000,
+				50000,
+			), rand.New(rand.NewSource(33533)))
 		},
 	},
 }
