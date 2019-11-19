@@ -130,6 +130,18 @@ func (s *influxTdigest) Add(f float64) {
 	s.t.Add(f, 1)
 }
 
+type lightstepTdigest struct {
+	t *lightstep.Stream
+}
+
+func (s *lightstepTdigest) Quantile(f float64) float64 {
+	return s.t.Quantile(f)
+}
+
+func (s *lightstepTdigest) Add(f float64) {
+	_ = s.t.Add(f)
+}
+
 type exponentialDistribution struct {
 	r *rand.Rand
 }
@@ -244,11 +256,12 @@ var digests = []digestRun{
 	{
 		name: "lightstep",
 		digest: func() commonTdigest {
-			return lightstep.NewStream(lightstep.NewConfig(
+			td := lightstep.NewStream(lightstep.NewConfig(
 				1000,
 				10000,
 				50000,
 			), rand.New(rand.NewSource(33533)))
+			return &lightstepTdigest{t: td}
 		},
 	},
 }
@@ -340,11 +353,7 @@ func BenchmarkTdigest_Quantile(b *testing.B) {
 }
 
 func relativeDifferencePercentile(res, correct float64) float64 {
-	num := math.Abs(res-correct) / ((math.Abs(res) + math.Abs(correct)) / 2)
-	if math.IsNaN(num) {
-		return 0
-	}
-	return num * 100
+	return math.Abs(res - correct)
 }
 
 // Benchmark the correctness of a quantile implementation after adding a static size of numbers.  Calculate correctness
