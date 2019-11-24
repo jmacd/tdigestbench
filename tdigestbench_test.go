@@ -322,88 +322,76 @@ func addNumbersToQuantile(ts commonTdigest, nums []float64) {
 	}
 }
 
-// // Benchmark creating a digest of size b.N, then calling a single set of quantiles on it (we call quantiles just to make sure the digest is used)
-// func BenchmarkTdigest_Add(b *testing.B) {
-// 	for _, source := range sources {
-// 		b.Run(fmt.Sprintf("source=%s", source.name), func(b *testing.B) {
-// 			for _, td := range digests {
-// 				b.Run(fmt.Sprintf("digest=%s", td.name), func(b *testing.B) {
-// 					nums := numberArrayFromSource(source.source(), b.N)
-// 					b.ReportAllocs()
-// 					b.ResetTimer()
-// 					digestImpl := td.digest()
-// 					addNumbersToQuantile(digestImpl, nums)
-// 					for _, q := range quantiles {
-// 						digestImpl.Quantile(q)
-// 					}
-// 				})
-// 			}
-// 		})
-// 	}
-// }
-
-// // Benchmark Total is the benchmark of a single item with a static size, tested b.N times.
-// func BenchmarkTdigest_TotalSize(b *testing.B) {
-// 	for _, size := range sizes {
-// 		b.Run(fmt.Sprintf("size=%d", size), func(b *testing.B) {
-// 			for _, source := range sources {
-// 				b.Run(fmt.Sprintf("source=%s", source.name), func(b *testing.B) {
-// 					nums := numberArrayFromSource(source.source(), size)
-// 					for _, td := range digests {
-// 						b.Run(fmt.Sprintf("digest=%s", td.name), func(b *testing.B) {
-// 							b.ReportAllocs()
-// 							b.ResetTimer()
-// 							for i := 0; i < b.N; i++ {
-// 								digestImpl := td.digest()
-// 								addNumbersToQuantile(digestImpl, nums)
-// 								for _, q := range quantiles {
-// 									digestImpl.Quantile(q)
-// 								}
-// 							}
-// 						})
-// 					}
-// 				})
-// 			}
-// 		})
-// 	}
-// }
-
-// // Benchmark calculating quantile b.N times for a static size
-// func BenchmarkTdigest_Quantile(b *testing.B) {
-// 	for _, size := range sizes {
-// 		b.Run(fmt.Sprintf("size=%d", size), func(b *testing.B) {
-// 			for _, source := range sources {
-// 				b.Run(fmt.Sprintf("source=%s", source.name), func(b *testing.B) {
-// 					nums := numberArrayFromSource(source.source(), size)
-// 					for _, td := range digests {
-// 						b.Run(fmt.Sprintf("digest=%s", td.name), func(b *testing.B) {
-// 							digestImpl := td.digest()
-// 							addNumbersToQuantile(digestImpl, nums)
-// 							b.ReportAllocs()
-// 							b.ResetTimer()
-// 							for i := 0; i < b.N; i++ {
-// 								for _, q := range quantiles {
-// 									digestImpl.Quantile(q)
-// 								}
-// 							}
-// 						})
-// 					}
-// 				})
-// 			}
-// 		})
-// 	}
-// }
-
-// func relativeDifferencePercentile(res, correct float64) float64 {
-// 	return math.Abs(res - correct)
-// }
-
-func relativeDifferencePercentile(res, correct float64) float64 {
-	num := math.Abs(res-correct) / ((math.Abs(res) + math.Abs(correct)) / 2)
-	if math.IsNaN(num) {
-		return 0
+// Benchmark creating a digest of size b.N, then calling a single set of quantiles on it (we call quantiles just to make sure the digest is used)
+func BenchmarkTdigest_Add(b *testing.B) {
+	for _, source := range sources {
+		b.Run(fmt.Sprintf("source=%s", source.name), func(b *testing.B) {
+			for _, td := range digests {
+				b.Run(fmt.Sprintf("digest=%s", td.name), func(b *testing.B) {
+					nums := numberArrayFromSource(source.source(), b.N)
+					b.ReportAllocs()
+					b.ResetTimer()
+					digestImpl := td.digest()
+					addNumbersToQuantile(digestImpl, nums)
+					for _, q := range quantiles {
+						digestImpl.Quantile(q)
+					}
+				})
+			}
+		})
 	}
-	return num * 100
+}
+
+// Benchmark Total is the benchmark of a single item with a static size, tested b.N times.
+func BenchmarkTdigest_TotalSize(b *testing.B) {
+	for _, size := range sizes {
+		b.Run(fmt.Sprintf("size=%d", size), func(b *testing.B) {
+			for _, source := range sources {
+				b.Run(fmt.Sprintf("source=%s", source.name), func(b *testing.B) {
+					nums := numberArrayFromSource(source.source(), size)
+					for _, td := range digests {
+						b.Run(fmt.Sprintf("digest=%s", td.name), func(b *testing.B) {
+							b.ReportAllocs()
+							b.ResetTimer()
+							for i := 0; i < b.N; i++ {
+								digestImpl := td.digest()
+								addNumbersToQuantile(digestImpl, nums)
+								for _, q := range quantiles {
+									digestImpl.Quantile(q)
+								}
+							}
+						})
+					}
+				})
+			}
+		})
+	}
+}
+
+// Benchmark calculating quantile b.N times for a static size
+func BenchmarkTdigest_Quantile(b *testing.B) {
+	for _, size := range sizes {
+		b.Run(fmt.Sprintf("size=%d", size), func(b *testing.B) {
+			for _, source := range sources {
+				b.Run(fmt.Sprintf("source=%s", source.name), func(b *testing.B) {
+					nums := numberArrayFromSource(source.source(), size)
+					for _, td := range digests {
+						b.Run(fmt.Sprintf("digest=%s", td.name), func(b *testing.B) {
+							digestImpl := td.digest()
+							addNumbersToQuantile(digestImpl, nums)
+							b.ReportAllocs()
+							b.ResetTimer()
+							for i := 0; i < b.N; i++ {
+								for _, q := range quantiles {
+									digestImpl.Quantile(q)
+								}
+							}
+						})
+					}
+				})
+			}
+		})
+	}
 }
 
 func quantileDistance(quant float64, tested commonTdigest, correct *correctQuantile) float64 {

@@ -20,28 +20,32 @@
 <text x="402.5" y="-15.602" transform="scale(1, -1)"
 	style="font-family:Times;font-weight:normal;font-style:normal;font-size:10px">0.999000</text>
 <g transform="rotate(90)">
-<text x="88.204" y="11.555" transform="scale(1, -1)"
+<text x="87.47" y="11.555" transform="scale(1, -1)"
 	style="font-family:Times;font-weight:normal;font-style:normal;font-size:12px">%difference</text>
 </g>
-<text x="27.916" y="-25.509" transform="scale(1, -1)"
-	style="font-family:Times;font-weight:normal;font-style:normal;font-size:10px">0</text>
-<text x="15.416" y="-102.66" transform="scale(1, -1)"
-	style="font-family:Times;font-weight:normal;font-style:normal;font-size:10px">0.03</text>
-<text x="15.416" y="-179.8" transform="scale(1, -1)"
-	style="font-family:Times;font-weight:normal;font-style:normal;font-size:10px">0.06</text>
-<path d="M35.416,30.23L43.416,30.23" style="fill:none;stroke:#000000;stroke-width:0.5" />
-<path d="M35.416,107.38L43.416,107.38" style="fill:none;stroke:#000000;stroke-width:0.5" />
-<path d="M35.416,184.53L43.416,184.53" style="fill:none;stroke:#000000;stroke-width:0.5" />
-<path d="M39.416,55.946L43.416,55.946" style="fill:none;stroke:#000000;stroke-width:0.5" />
-<path d="M39.416,81.662L43.416,81.662" style="fill:none;stroke:#000000;stroke-width:0.5" />
-<path d="M39.416,133.09L43.416,133.09" style="fill:none;stroke:#000000;stroke-width:0.5" />
-<path d="M39.416,158.81L43.416,158.81" style="fill:none;stroke:#000000;stroke-width:0.5" />
-<path d="M43.416,30.23L43.416,204.58" style="fill:none;stroke:#000000;stroke-width:0.5" />
-<path d="M62.916,30.23L62.916,33.239L92.916,33.239L92.916,30.23Z" style="fill:#F15A60" />
-<path d="M148.75,30.23L148.75,32.344L178.75,32.344L178.75,30.23Z" style="fill:#F15A60" />
-<path d="M234.58,30.23L234.58,163.44L264.58,163.44L264.58,30.23Z" style="fill:#F15A60" />
-<path d="M320.42,30.23L320.42,116.89L350.42,116.89L350.42,30.23Z" style="fill:#F15A60" />
-<path d="M406.25,30.23L406.25,204.58L436.25,204.58L436.25,30.23Z" style="fill:#F15A60" />
+<text x="15.416" y="-38.61" transform="scale(1, -1)"
+	style="font-family:Times;font-weight:normal;font-style:normal;font-size:10px">0.00</text>
+<text x="15.416" y="-116.78" transform="scale(1, -1)"
+	style="font-family:Times;font-weight:normal;font-style:normal;font-size:10px">0.25</text>
+<text x="15.416" y="-194.96" transform="scale(1, -1)"
+	style="font-family:Times;font-weight:normal;font-style:normal;font-size:10px">0.50</text>
+<path d="M35.416,43.332L43.416,43.332" style="fill:none;stroke:#000000;stroke-width:0.5" />
+<path d="M35.416,121.5L43.416,121.5" style="fill:none;stroke:#000000;stroke-width:0.5" />
+<path d="M35.416,199.68L43.416,199.68" style="fill:none;stroke:#000000;stroke-width:0.5" />
+<path d="M39.416,58.967L43.416,58.967" style="fill:none;stroke:#000000;stroke-width:0.5" />
+<path d="M39.416,74.601L43.416,74.601" style="fill:none;stroke:#000000;stroke-width:0.5" />
+<path d="M39.416,90.236L43.416,90.236" style="fill:none;stroke:#000000;stroke-width:0.5" />
+<path d="M39.416,105.87L43.416,105.87" style="fill:none;stroke:#000000;stroke-width:0.5" />
+<path d="M39.416,137.14L43.416,137.14" style="fill:none;stroke:#000000;stroke-width:0.5" />
+<path d="M39.416,152.77L43.416,152.77" style="fill:none;stroke:#000000;stroke-width:0.5" />
+<path d="M39.416,168.41L43.416,168.41" style="fill:none;stroke:#000000;stroke-width:0.5" />
+<path d="M39.416,184.04L43.416,184.04" style="fill:none;stroke:#000000;stroke-width:0.5" />
+<path d="M43.416,30.23L43.416,203.12" style="fill:none;stroke:#000000;stroke-width:0.5" />
+<path d="M62.916,43.332L62.916,76.165L92.916,76.165L92.916,43.332Z" style="fill:#F15A60" />
+<path d="M148.75,43.332L148.75,30.23L178.75,30.23L178.75,43.332Z" style="fill:#F15A60" />
+<path d="M234.58,43.332L234.58,203.12L264.58,203.12L264.58,43.332Z" style="fill:#F15A60" />
+<path d="M320.42,43.332L320.42,33.951L350.42,33.951L350.42,43.332Z" style="fill:#F15A60" />
+<path d="M406.25,43.332L406.25,40.368L436.25,40.368L436.25,43.332Z" style="fill:#F15A60" />
 <path d="M420,204.58L420,204.58L440,204.58L440,204.58Z" style="fill:#F15A60" />
 </g>
 </svg>

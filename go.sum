@@ -149,6 +149,8 @@ github.com/leesper/go_rng v0.0.0-20190531154944-a612b043e353/go.mod h1:N0SVk0uhy
 github.com/lib/pq v1.2.0/go.mod h1:5WUZQaWbwv1U+lTReE5YruASi9Al49XbQIvNi/34Woo=
 github.com/lightstep/varopt v1.1.0 h1:jjd4e0fSVUvTxLGcUPPxQ2vvAk55Q/SG1stIAutkVzs=
 github.com/lightstep/varopt v1.1.0/go.mod h1:3GP18zB7pfvbVUAnJ8xfvYjpwp0CF027QRD5FsfXau0=
+github.com/lightstep/varopt v1.2.0 h1:GOf4lyLLYRy+lB0x5aqrDLHfckSxucDkmeLgAi8JhLE=
+github.com/lightstep/varopt v1.2.0/go.mod h1:3GP18zB7pfvbVUAnJ8xfvYjpwp0CF027QRD5FsfXau0=
 github.com/logrusorgru/aurora v0.0.0-20181002194514-a7b3b318ed4e/go.mod h1:7rIyQOR62GCctdiQpZ/zOJlFyk6y+94wXzv6RNZgaR4=
 github.com/magiconair/properties v1.8.0 h1:LLgXmsheXeRoUOBOjtwPQCWIYqM/LU1ayDtDePerRcY=
 github.com/magiconair/properties v1.8.0/go.mod h1:PppfXfuXeibc/6YijjN8zIbojt8czPbwD3XqdrwzmxQ=
