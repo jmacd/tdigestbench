@@ -53,11 +53,13 @@ draw:
 	benchdraw --filter="BenchmarkCorrectness/size=1000000/quantile=0.990000" --x=source --y=%difference < benchresult.txt > pics/correct_99.svg
 	benchdraw --filter="BenchmarkCorrectness/size=1000000" --x=digest --y=%difference < benchresult.txt > pics/correct_allquant.svg
 	benchdraw --filter="BenchmarkCorrectness/size=1000000/digest=segmentio" --v=3 --x=source --y=%difference < benchresult.txt > pics/correct_segment.svg
-	benchdraw --filter="BenchmarkCorrectness/size=1000000/digest=lightstep" --v=3 --x=source --y=%difference < benchresult.txt > pics/correct_lightstep.svg
+	benchdraw --filter="BenchmarkCorrectness/size=1000000/digest=lightcube" --v=3 --x=source --y=%difference < benchresult.txt > pics/correct_lightcube.svg
+	benchdraw --filter="BenchmarkCorrectness/size=1000000/digest=lightflat" --v=3 --x=source --y=%difference < benchresult.txt > pics/correct_lightflat.svg
 	benchdraw --filter="BenchmarkCorrectness/size=1000000/digest=influxdata" --v=3 --x=source --y=%difference < benchresult.txt > pics/correct_influx.svg
 	benchdraw --filter="BenchmarkCorrectness/size=1000000/digest=caio" --v=3 --x=source --y=%difference < benchresult.txt > pics/correct_caio.svg
 	benchdraw --filter="BenchmarkCorrectness/size=1000000/source=exponential" --v=3 --x=digest --y=%difference < benchresult.txt > pics/correct_exponential_all.svg
 	benchdraw --filter="BenchmarkCorrectness/size=1000000/source=exponential/digest=influxdata" --v=3 --x=quantile --y=%difference < benchresult.txt > pics/correct_exponential_influxdb.svg
 	benchdraw --filter="BenchmarkCorrectness/size=1000000/source=exponential/digest=caio" --v=3 --x=quantile --y=%difference < benchresult.txt > pics/correct_exponential_caio.svg
 	benchdraw --filter="BenchmarkCorrectness/size=1000000/source=exponential/digest=segmentio" --v=3 --x=quantile --y=%difference < benchresult.txt > pics/correct_exponential_segmentio.svg
-	benchdraw --filter="BenchmarkCorrectness/size=1000000/source=exponential/digest=lightstep" --v=3 --x=quantile --y=%difference < benchresult.txt > pics/correct_exponential_lightstep.svg
+	benchdraw --filter="BenchmarkCorrectness/size=1000000/source=exponential/digest=lightcube" --v=3 --x=quantile --y=%difference < benchresult.txt > pics/correct_exponential_lightcube.svg
+	benchdraw --filter="BenchmarkCorrectness/size=1000000/source=exponential/digest=lightflat" --v=3 --x=quantile --y=%difference < benchresult.txt > pics/correct_exponential_lightflat.svg

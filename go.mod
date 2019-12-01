@@ -4,6 +4,14 @@ go 1.13
 
 replace github.com/lightstep/sandbox/jmacd/tdigest => ../../lightstep/sandbox/jmacd/tdigest
 
+replace github.com/jmacd/gospline => ../../jmacd/gospline
+
+replace github.com/lightstep/varopt => ../../lightstep/varopt
+
+replace github.com/lightstep/sandbox/jmacd/essay => ../../lightstep/sandbox/jmacd/essay
+
+replace github.com/lightstep/sandbox/jmacd/gonum => ../../lightstep/sandbox/jmacd/gonum
+
 require (
 	github.com/caio/go-tdigest v2.3.0+incompatible
 	github.com/golangci/golangci-lint v1.21.0

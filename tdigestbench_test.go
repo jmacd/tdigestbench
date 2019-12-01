@@ -295,13 +295,27 @@ var digests = []digestRun{
 		},
 	},
 	{
-		name: "lightstep",
+		name: "lightcube",
 		digest: func() commonTdigest {
 			td := lightstep.NewStream(lightstep.NewConfig(
 				1000,
+				5000,
 				10000,
 				10000,
+				lightstep.CubicInterp,
+			), rand.New(rand.NewSource(33533)))
+			return &lightstepTdigest{t: td}
+		},
+	},
+	{
+		name: "lightflat",
+		digest: func() commonTdigest {
+			td := lightstep.NewStream(lightstep.NewConfig(
+				1000,
+				5000,
 				10000,
+				10000,
+				lightstep.FlatInterp,
 			), rand.New(rand.NewSource(33533)))
 			return &lightstepTdigest{t: td}
 		},

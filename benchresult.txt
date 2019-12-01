@@ -1,86 +1,106 @@
 goos: darwin
 goarch: amd64
 pkg: github.com/jmacd/tdigestbench
-BenchmarkTdigest_Add/source=rand/digest=caio-8         	 1000000	      1372 ns/op	       0 B/op	       0 allocs/op
-BenchmarkTdigest_Add/source=rand/digest=segmentio-8    	 5152618	       473 ns/op	       8 B/op	       1 allocs/op
-BenchmarkTdigest_Add/source=rand/digest=influxdata-8   	 7288276	       162 ns/op	       1 B/op	       0 allocs/op
-BenchmarkTdigest_Add/source=rand/digest=lightstep-8    	 2630535	       457 ns/op	      14 B/op	       0 allocs/op
-BenchmarkTdigest_Add/source=exponential/digest=caio-8  	 1000000	      1450 ns/op	       0 B/op	       0 allocs/op
-BenchmarkTdigest_Add/source=exponential/digest=segmentio-8         	 4799541	       461 ns/op	       8 B/op	       1 allocs/op
-BenchmarkTdigest_Add/source=exponential/digest=influxdata-8        	 7248202	       157 ns/op	       1 B/op	       0 allocs/op
-BenchmarkTdigest_Add/source=exponential/digest=lightstep-8         	 2741594	       439 ns/op	      14 B/op	       0 allocs/op
-BenchmarkTdigest_Add/source=normal/digest=caio-8                   	 1000000	      1421 ns/op	       0 B/op	       0 allocs/op
-BenchmarkTdigest_Add/source=normal/digest=segmentio-8              	 4836570	       455 ns/op	       8 B/op	       1 allocs/op
-BenchmarkTdigest_Add/source=normal/digest=influxdata-8             	 7323018	       159 ns/op	       1 B/op	       0 allocs/op
-BenchmarkTdigest_Add/source=normal/digest=lightstep-8              	 2741372	       432 ns/op	      14 B/op	       0 allocs/op
-BenchmarkTdigest_Add/source=tailspike/digest=caio-8                	 1000000	      1417 ns/op	       0 B/op	       0 allocs/op
-BenchmarkTdigest_Add/source=tailspike/digest=segmentio-8           	 4920660	       463 ns/op	       8 B/op	       1 allocs/op
-BenchmarkTdigest_Add/source=tailspike/digest=influxdata-8          	 7397154	       159 ns/op	       1 B/op	       0 allocs/op
-BenchmarkTdigest_Add/source=tailspike/digest=lightstep-8           	 2733840	       432 ns/op	      14 B/op	       0 allocs/op
-BenchmarkTdigest_TotalSize/size=1000/source=rand/digest=caio-8     	    3764	    317968 ns/op	  128465 B/op	      10 allocs/op
-BenchmarkTdigest_TotalSize/size=1000/source=rand/digest=segmentio-8         	   15044	     79973 ns/op	    8544 B/op	    1006 allocs/op
-BenchmarkTdigest_TotalSize/size=1000/source=rand/digest=influxdata-8        	    6499	    184268 ns/op	  172168 B/op	       5 allocs/op
-BenchmarkTdigest_TotalSize/size=1000/source=rand/digest=lightstep-8         	    3296	    367092 ns/op	  972025 B/op	      46 allocs/op
-BenchmarkTdigest_TotalSize/size=1000/source=exponential/digest=caio-8       	    3790	    317224 ns/op	  128464 B/op	      10 allocs/op
-BenchmarkTdigest_TotalSize/size=1000/source=exponential/digest=segmentio-8  	   13578	     87829 ns/op	    8544 B/op	    1006 allocs/op
-BenchmarkTdigest_TotalSize/size=1000/source=exponential/digest=influxdata-8 	    6529	    184869 ns/op	  172168 B/op	       5 allocs/op
-BenchmarkTdigest_TotalSize/size=1000/source=exponential/digest=lightstep-8  	    3088	    382542 ns/op	  972028 B/op	      46 allocs/op
-BenchmarkTdigest_TotalSize/size=1000/source=normal/digest=caio-8            	    3681	    325210 ns/op	  128464 B/op	      10 allocs/op
-BenchmarkTdigest_TotalSize/size=1000/source=normal/digest=segmentio-8       	   14265	     85160 ns/op	    8544 B/op	    1006 allocs/op
-BenchmarkTdigest_TotalSize/size=1000/source=normal/digest=influxdata-8      	    6154	    195357 ns/op	  172168 B/op	       5 allocs/op
-BenchmarkTdigest_TotalSize/size=1000/source=normal/digest=lightstep-8       	    3081	    436115 ns/op	  972033 B/op	      46 allocs/op
-BenchmarkTdigest_TotalSize/size=1000/source=tailspike/digest=caio-8         	    3619	    333137 ns/op	  128464 B/op	      10 allocs/op
-BenchmarkTdigest_TotalSize/size=1000/source=tailspike/digest=segmentio-8    	   13438	     89061 ns/op	    8544 B/op	    1006 allocs/op
-BenchmarkTdigest_TotalSize/size=1000/source=tailspike/digest=influxdata-8   	    6372	    190805 ns/op	  172168 B/op	       5 allocs/op
-BenchmarkTdigest_TotalSize/size=1000/source=tailspike/digest=lightstep-8    	    3022	    387794 ns/op	  972026 B/op	      46 allocs/op
-BenchmarkTdigest_TotalSize/size=1000000/source=rand/digest=caio-8           	       1	1527773395 ns/op	  292304 B/op	      12 allocs/op
-BenchmarkTdigest_TotalSize/size=1000000/source=rand/digest=segmentio-8      	       5	 249239382 ns/op	 8004155 B/op	 1000009 allocs/op
-BenchmarkTdigest_TotalSize/size=1000000/source=rand/digest=influxdata-8     	       6	 169840842 ns/op	 1534856 B/op	     130 allocs/op
-BenchmarkTdigest_TotalSize/size=1000000/source=rand/digest=lightstep-8      	       3	 464251126 ns/op	17399720 B/op	    1385 allocs/op
-BenchmarkTdigest_TotalSize/size=1000000/source=exponential/digest=caio-8    	       1	1493148959 ns/op	  292304 B/op	      12 allocs/op
-BenchmarkTdigest_TotalSize/size=1000000/source=exponential/digest=segmentio-8         	       4	 261154454 ns/op	 8004164 B/op	 1000009 allocs/op
-BenchmarkTdigest_TotalSize/size=1000000/source=exponential/digest=influxdata-8        	       6	 174355206 ns/op	 1538184 B/op	     130 allocs/op
-BenchmarkTdigest_TotalSize/size=1000000/source=exponential/digest=lightstep-8         	       3	 491639213 ns/op	17399720 B/op	    1385 allocs/op
-BenchmarkTdigest_TotalSize/size=1000000/source=normal/digest=caio-8                   	       1	1525090602 ns/op	  292304 B/op	      12 allocs/op
-BenchmarkTdigest_TotalSize/size=1000000/source=normal/digest=segmentio-8              	       4	 264977077 ns/op	 8004180 B/op	 1000009 allocs/op
-BenchmarkTdigest_TotalSize/size=1000000/source=normal/digest=influxdata-8             	       6	 175817245 ns/op	 1542280 B/op	     130 allocs/op
-BenchmarkTdigest_TotalSize/size=1000000/source=normal/digest=lightstep-8              	       3	 463435161 ns/op	17399720 B/op	    1385 allocs/op
-BenchmarkTdigest_TotalSize/size=1000000/source=tailspike/digest=caio-8                	       1	1534417050 ns/op	  292304 B/op	      12 allocs/op
-BenchmarkTdigest_TotalSize/size=1000000/source=tailspike/digest=segmentio-8           	       4	 273409038 ns/op	 8004140 B/op	 1000009 allocs/op
-BenchmarkTdigest_TotalSize/size=1000000/source=tailspike/digest=influxdata-8          	       6	 176639878 ns/op	 1541000 B/op	     130 allocs/op
-BenchmarkTdigest_TotalSize/size=1000000/source=tailspike/digest=lightstep-8           	       3	 457693127 ns/op	17399720 B/op	    1385 allocs/op
-BenchmarkTdigest_Quantile/size=1000/source=rand/digest=caio-8                         	  298392	      4100 ns/op	       0 B/op	       0 allocs/op
-BenchmarkTdigest_Quantile/size=1000/source=rand/digest=segmentio-8                    	14761731	        80.7 ns/op	       0 B/op	       0 allocs/op
-BenchmarkTdigest_Quantile/size=1000/source=rand/digest=influxdata-8                   	 4574283	       261 ns/op	       0 B/op	       0 allocs/op
-BenchmarkTdigest_Quantile/size=1000/source=rand/digest=lightstep-8                    	 5797496	       207 ns/op	       0 B/op	       0 allocs/op
-BenchmarkTdigest_Quantile/size=1000/source=exponential/digest=caio-8                  	  316916	      3762 ns/op	       0 B/op	       0 allocs/op
-BenchmarkTdigest_Quantile/size=1000/source=exponential/digest=segmentio-8             	12641814	        94.1 ns/op	       0 B/op	       0 allocs/op
-BenchmarkTdigest_Quantile/size=1000/source=exponential/digest=influxdata-8            	 4739139	       252 ns/op	       0 B/op	       0 allocs/op
-BenchmarkTdigest_Quantile/size=1000/source=exponential/digest=lightstep-8             	 6128479	       206 ns/op	       0 B/op	       0 allocs/op
-BenchmarkTdigest_Quantile/size=1000/source=normal/digest=caio-8                       	  298923	      3994 ns/op	       0 B/op	       0 allocs/op
-BenchmarkTdigest_Quantile/size=1000/source=normal/digest=segmentio-8                  	13443961	        90.5 ns/op	       0 B/op	       0 allocs/op
-BenchmarkTdigest_Quantile/size=1000/source=normal/digest=influxdata-8                 	 4547734	       270 ns/op	       0 B/op	       0 allocs/op
-BenchmarkTdigest_Quantile/size=1000/source=normal/digest=lightstep-8                  	 5514610	       207 ns/op	       0 B/op	       0 allocs/op
-BenchmarkTdigest_Quantile/size=1000/source=tailspike/digest=caio-8                    	  307988	      3931 ns/op	       0 B/op	       0 allocs/op
-BenchmarkTdigest_Quantile/size=1000/source=tailspike/digest=segmentio-8               	14529552	        83.9 ns/op	       0 B/op	       0 allocs/op
-BenchmarkTdigest_Quantile/size=1000/source=tailspike/digest=influxdata-8              	 4646335	       250 ns/op	       0 B/op	       0 allocs/op
-BenchmarkTdigest_Quantile/size=1000/source=tailspike/digest=lightstep-8               	 5889177	       204 ns/op	       0 B/op	       0 allocs/op
-BenchmarkTdigest_Quantile/size=1000000/source=rand/digest=caio-8                      	   30730	     37677 ns/op	       0 B/op	       0 allocs/op
-BenchmarkTdigest_Quantile/size=1000000/source=rand/digest=segmentio-8                 	 2455954	       467 ns/op	       0 B/op	       0 allocs/op
-BenchmarkTdigest_Quantile/size=1000000/source=rand/digest=influxdata-8                	 4466715	       264 ns/op	       0 B/op	       0 allocs/op
-BenchmarkTdigest_Quantile/size=1000000/source=rand/digest=lightstep-8                 	 5942170	       206 ns/op	       0 B/op	       0 allocs/op
-BenchmarkTdigest_Quantile/size=1000000/source=exponential/digest=caio-8               	   33201	     35329 ns/op	       0 B/op	       0 allocs/op
-BenchmarkTdigest_Quantile/size=1000000/source=exponential/digest=segmentio-8          	 2472625	       482 ns/op	       0 B/op	       0 allocs/op
-BenchmarkTdigest_Quantile/size=1000000/source=exponential/digest=influxdata-8         	 4724833	       255 ns/op	       0 B/op	       0 allocs/op
-BenchmarkTdigest_Quantile/size=1000000/source=exponential/digest=lightstep-8          	 5906959	       200 ns/op	       0 B/op	       0 allocs/op
-BenchmarkTdigest_Quantile/size=1000000/source=normal/digest=caio-8                    	   32076	     36028 ns/op	       0 B/op	       0 allocs/op
-BenchmarkTdigest_Quantile/size=1000000/source=normal/digest=segmentio-8               	 2463882	       498 ns/op	       0 B/op	       0 allocs/op
-BenchmarkTdigest_Quantile/size=1000000/source=normal/digest=influxdata-8              	 4590031	       258 ns/op	       0 B/op	       0 allocs/op
-BenchmarkTdigest_Quantile/size=1000000/source=normal/digest=lightstep-8               	 5790164	       204 ns/op	       0 B/op	       0 allocs/op
-BenchmarkTdigest_Quantile/size=1000000/source=tailspike/digest=caio-8                 	   33643	     35427 ns/op	       0 B/op	       0 allocs/op
-BenchmarkTdigest_Quantile/size=1000000/source=tailspike/digest=segmentio-8            	 2590371	       464 ns/op	       0 B/op	       0 allocs/op
-BenchmarkTdigest_Quantile/size=1000000/source=tailspike/digest=influxdata-8           	 4625510	       258 ns/op	       0 B/op	       0 allocs/op
-BenchmarkTdigest_Quantile/size=1000000/source=tailspike/digest=lightstep-8            	 5710801	       199 ns/op	       0 B/op	       0 allocs/op
+BenchmarkTdigest_Add/source=rand/digest=caio-8         	 1000000	      1396 ns/op	       0 B/op	       0 allocs/op
+BenchmarkTdigest_Add/source=rand/digest=segmentio-8    	 5277710	       482 ns/op	       8 B/op	       1 allocs/op
+BenchmarkTdigest_Add/source=rand/digest=influxdata-8   	 7246879	       157 ns/op	       1 B/op	       0 allocs/op
+BenchmarkTdigest_Add/source=rand/digest=lightcube-8    	 6174511	       183 ns/op	       7 B/op	       0 allocs/op
+BenchmarkTdigest_Add/source=rand/digest=lightflat-8    	 6282856	       182 ns/op	       0 B/op	       0 allocs/op
+BenchmarkTdigest_Add/source=exponential/digest=caio-8  	 1000000	      1411 ns/op	       0 B/op	       0 allocs/op
+BenchmarkTdigest_Add/source=exponential/digest=segmentio-8         	 4978063	       449 ns/op	       8 B/op	       1 allocs/op
+BenchmarkTdigest_Add/source=exponential/digest=influxdata-8        	 7387198	       155 ns/op	       1 B/op	       0 allocs/op
+BenchmarkTdigest_Add/source=exponential/digest=lightcube-8         	 6218652	       183 ns/op	       7 B/op	       0 allocs/op
+BenchmarkTdigest_Add/source=exponential/digest=lightflat-8         	 6357843	       186 ns/op	       0 B/op	       0 allocs/op
+BenchmarkTdigest_Add/source=normal/digest=caio-8                   	 1000000	      1414 ns/op	       0 B/op	       0 allocs/op
+BenchmarkTdigest_Add/source=normal/digest=segmentio-8              	 4824176	       451 ns/op	       8 B/op	       1 allocs/op
+BenchmarkTdigest_Add/source=normal/digest=influxdata-8             	 7264137	       161 ns/op	       1 B/op	       0 allocs/op
+BenchmarkTdigest_Add/source=normal/digest=lightcube-8              	 5416136	       204 ns/op	       7 B/op	       0 allocs/op
+BenchmarkTdigest_Add/source=normal/digest=lightflat-8              	 5753732	       198 ns/op	       0 B/op	       0 allocs/op
+BenchmarkTdigest_Add/source=tailspike/digest=caio-8                	 1000000	      1431 ns/op	       0 B/op	       0 allocs/op
+BenchmarkTdigest_Add/source=tailspike/digest=segmentio-8           	 5041605	       448 ns/op	       8 B/op	       1 allocs/op
+BenchmarkTdigest_Add/source=tailspike/digest=influxdata-8          	 7408573	       157 ns/op	       1 B/op	       0 allocs/op
+BenchmarkTdigest_Add/source=tailspike/digest=lightcube-8           	 6176434	       183 ns/op	       7 B/op	       0 allocs/op
+BenchmarkTdigest_Add/source=tailspike/digest=lightflat-8           	 6241051	       181 ns/op	       0 B/op	       0 allocs/op
+BenchmarkTdigest_TotalSize/size=1000/source=rand/digest=caio-8     	    3693	    323552 ns/op	  128464 B/op	      10 allocs/op
+BenchmarkTdigest_TotalSize/size=1000/source=rand/digest=segmentio-8         	   15228	     78920 ns/op	    8544 B/op	    1006 allocs/op
+BenchmarkTdigest_TotalSize/size=1000/source=rand/digest=influxdata-8        	    6643	    184700 ns/op	  172168 B/op	       5 allocs/op
+BenchmarkTdigest_TotalSize/size=1000/source=rand/digest=lightcube-8         	    3570	    315743 ns/op	 1267505 B/op	      17 allocs/op
+BenchmarkTdigest_TotalSize/size=1000/source=rand/digest=lightflat-8         	    3762	    315564 ns/op	 1267506 B/op	      17 allocs/op
+BenchmarkTdigest_TotalSize/size=1000/source=exponential/digest=caio-8       	    3734	    323426 ns/op	  128464 B/op	      10 allocs/op
+BenchmarkTdigest_TotalSize/size=1000/source=exponential/digest=segmentio-8  	   13551	     88523 ns/op	    8544 B/op	    1006 allocs/op
+BenchmarkTdigest_TotalSize/size=1000/source=exponential/digest=influxdata-8 	    6612	    184530 ns/op	  172168 B/op	       5 allocs/op
+BenchmarkTdigest_TotalSize/size=1000/source=exponential/digest=lightcube-8  	    3469	    350013 ns/op	 1267505 B/op	      17 allocs/op
+BenchmarkTdigest_TotalSize/size=1000/source=exponential/digest=lightflat-8  	    3135	    338988 ns/op	 1267504 B/op	      17 allocs/op
+BenchmarkTdigest_TotalSize/size=1000/source=normal/digest=caio-8            	    3646	    325773 ns/op	  128464 B/op	      10 allocs/op
+BenchmarkTdigest_TotalSize/size=1000/source=normal/digest=segmentio-8       	   15423	     77701 ns/op	    8544 B/op	    1006 allocs/op
+BenchmarkTdigest_TotalSize/size=1000/source=normal/digest=influxdata-8      	    6496	    186682 ns/op	  172168 B/op	       5 allocs/op
+BenchmarkTdigest_TotalSize/size=1000/source=normal/digest=lightcube-8       	    3315	    340735 ns/op	 1267504 B/op	      17 allocs/op
+BenchmarkTdigest_TotalSize/size=1000/source=normal/digest=lightflat-8       	    3487	    341188 ns/op	 1267504 B/op	      17 allocs/op
+BenchmarkTdigest_TotalSize/size=1000/source=tailspike/digest=caio-8         	    3638	    327705 ns/op	  128464 B/op	      10 allocs/op
+BenchmarkTdigest_TotalSize/size=1000/source=tailspike/digest=segmentio-8    	   15063	     80208 ns/op	    8544 B/op	    1006 allocs/op
+BenchmarkTdigest_TotalSize/size=1000/source=tailspike/digest=influxdata-8   	    6462	    185207 ns/op	  172168 B/op	       5 allocs/op
+BenchmarkTdigest_TotalSize/size=1000/source=tailspike/digest=lightcube-8    	    3476	    340556 ns/op	 1267503 B/op	      17 allocs/op
+BenchmarkTdigest_TotalSize/size=1000/source=tailspike/digest=lightflat-8    	    3483	    348879 ns/op	 1267504 B/op	      17 allocs/op
+BenchmarkTdigest_TotalSize/size=1000000/source=rand/digest=caio-8           	       1	1380642466 ns/op	  292304 B/op	      12 allocs/op
+BenchmarkTdigest_TotalSize/size=1000000/source=rand/digest=segmentio-8      	       5	 228344429 ns/op	 8004132 B/op	 1000009 allocs/op
+BenchmarkTdigest_TotalSize/size=1000000/source=rand/digest=influxdata-8     	       7	 163690756 ns/op	 1534856 B/op	     130 allocs/op
+BenchmarkTdigest_TotalSize/size=1000000/source=rand/digest=lightcube-8      	       6	 184806596 ns/op	 9988040 B/op	    1057 allocs/op
+BenchmarkTdigest_TotalSize/size=1000000/source=rand/digest=lightflat-8      	       6	 187009624 ns/op	 3344040 B/op	     257 allocs/op
+BenchmarkTdigest_TotalSize/size=1000000/source=exponential/digest=caio-8    	       1	1348955164 ns/op	  292304 B/op	      12 allocs/op
+BenchmarkTdigest_TotalSize/size=1000000/source=exponential/digest=segmentio-8         	       5	 233674208 ns/op	 8004136 B/op	 1000009 allocs/op
+BenchmarkTdigest_TotalSize/size=1000000/source=exponential/digest=influxdata-8        	       7	 156360666 ns/op	 1538184 B/op	     130 allocs/op
+BenchmarkTdigest_TotalSize/size=1000000/source=exponential/digest=lightcube-8         	       6	 184720653 ns/op	 9988040 B/op	    1057 allocs/op
+BenchmarkTdigest_TotalSize/size=1000000/source=exponential/digest=lightflat-8         	       6	 192179092 ns/op	 3344040 B/op	     257 allocs/op
+BenchmarkTdigest_TotalSize/size=1000000/source=normal/digest=caio-8                   	       1	1362655256 ns/op	  292304 B/op	      12 allocs/op
+BenchmarkTdigest_TotalSize/size=1000000/source=normal/digest=segmentio-8              	       5	 234801839 ns/op	 8004136 B/op	 1000009 allocs/op
+BenchmarkTdigest_TotalSize/size=1000000/source=normal/digest=influxdata-8             	       7	 158077397 ns/op	 1542280 B/op	     130 allocs/op
+BenchmarkTdigest_TotalSize/size=1000000/source=normal/digest=lightcube-8              	       5	 206586325 ns/op	 9988040 B/op	    1057 allocs/op
+BenchmarkTdigest_TotalSize/size=1000000/source=normal/digest=lightflat-8              	       6	 203474358 ns/op	 3344056 B/op	     257 allocs/op
+BenchmarkTdigest_TotalSize/size=1000000/source=tailspike/digest=caio-8                	       1	1382527268 ns/op	  292304 B/op	      12 allocs/op
+BenchmarkTdigest_TotalSize/size=1000000/source=tailspike/digest=segmentio-8           	       5	 232180680 ns/op	 8004139 B/op	 1000009 allocs/op
+BenchmarkTdigest_TotalSize/size=1000000/source=tailspike/digest=influxdata-8          	       7	 157172923 ns/op	 1541000 B/op	     130 allocs/op
+BenchmarkTdigest_TotalSize/size=1000000/source=tailspike/digest=lightcube-8           	       6	 185246862 ns/op	 9988040 B/op	    1057 allocs/op
+BenchmarkTdigest_TotalSize/size=1000000/source=tailspike/digest=lightflat-8           	       6	 185702771 ns/op	 3344040 B/op	     257 allocs/op
+BenchmarkTdigest_Quantile/size=1000/source=rand/digest=caio-8                         	  306957	      3856 ns/op	       0 B/op	       0 allocs/op
+BenchmarkTdigest_Quantile/size=1000/source=rand/digest=segmentio-8                    	15636730	        80.0 ns/op	       0 B/op	       0 allocs/op
+BenchmarkTdigest_Quantile/size=1000/source=rand/digest=influxdata-8                   	 4555510	       248 ns/op	       0 B/op	       0 allocs/op
+BenchmarkTdigest_Quantile/size=1000/source=rand/digest=lightcube-8                    	 7229812	       165 ns/op	       0 B/op	       0 allocs/op
+BenchmarkTdigest_Quantile/size=1000/source=rand/digest=lightflat-8                    	 7146206	       165 ns/op	       0 B/op	       0 allocs/op
+BenchmarkTdigest_Quantile/size=1000/source=exponential/digest=caio-8                  	  320030	      3709 ns/op	       0 B/op	       0 allocs/op
+BenchmarkTdigest_Quantile/size=1000/source=exponential/digest=segmentio-8             	13195903	        90.8 ns/op	       0 B/op	       0 allocs/op
+BenchmarkTdigest_Quantile/size=1000/source=exponential/digest=influxdata-8            	 5023986	       239 ns/op	       0 B/op	       0 allocs/op
+BenchmarkTdigest_Quantile/size=1000/source=exponential/digest=lightcube-8             	 7181198	       171 ns/op	       0 B/op	       0 allocs/op
+BenchmarkTdigest_Quantile/size=1000/source=exponential/digest=lightflat-8             	 7080298	       166 ns/op	       0 B/op	       0 allocs/op
+BenchmarkTdigest_Quantile/size=1000/source=normal/digest=caio-8                       	  318596	      3698 ns/op	       0 B/op	       0 allocs/op
+BenchmarkTdigest_Quantile/size=1000/source=normal/digest=segmentio-8                  	15188934	        77.8 ns/op	       0 B/op	       0 allocs/op
+BenchmarkTdigest_Quantile/size=1000/source=normal/digest=influxdata-8                 	 4936785	       244 ns/op	       0 B/op	       0 allocs/op
+BenchmarkTdigest_Quantile/size=1000/source=normal/digest=lightcube-8                  	 7218938	       167 ns/op	       0 B/op	       0 allocs/op
+BenchmarkTdigest_Quantile/size=1000/source=normal/digest=lightflat-8                  	 7225728	       168 ns/op	       0 B/op	       0 allocs/op
+BenchmarkTdigest_Quantile/size=1000/source=tailspike/digest=caio-8                    	  303789	      3958 ns/op	       0 B/op	       0 allocs/op
+BenchmarkTdigest_Quantile/size=1000/source=tailspike/digest=segmentio-8               	13878997	        89.0 ns/op	       0 B/op	       0 allocs/op
+BenchmarkTdigest_Quantile/size=1000/source=tailspike/digest=influxdata-8              	 4661230	       258 ns/op	       0 B/op	       0 allocs/op
+BenchmarkTdigest_Quantile/size=1000/source=tailspike/digest=lightcube-8               	 6773257	       177 ns/op	       0 B/op	       0 allocs/op
+BenchmarkTdigest_Quantile/size=1000/source=tailspike/digest=lightflat-8               	 6773424	       177 ns/op	       0 B/op	       0 allocs/op
+BenchmarkTdigest_Quantile/size=1000000/source=rand/digest=caio-8                      	   33685	     35447 ns/op	       0 B/op	       0 allocs/op
+BenchmarkTdigest_Quantile/size=1000000/source=rand/digest=segmentio-8                 	 2617626	       457 ns/op	       0 B/op	       0 allocs/op
+BenchmarkTdigest_Quantile/size=1000000/source=rand/digest=influxdata-8                	 4867846	       245 ns/op	       0 B/op	       0 allocs/op
+BenchmarkTdigest_Quantile/size=1000000/source=rand/digest=lightcube-8                 	 5842830	       205 ns/op	       0 B/op	       0 allocs/op
+BenchmarkTdigest_Quantile/size=1000000/source=rand/digest=lightflat-8                 	 5582283	       206 ns/op	       0 B/op	       0 allocs/op
+BenchmarkTdigest_Quantile/size=1000000/source=exponential/digest=caio-8               	   34441	     34830 ns/op	       0 B/op	       0 allocs/op
+BenchmarkTdigest_Quantile/size=1000000/source=exponential/digest=segmentio-8          	 2520535	       477 ns/op	       0 B/op	       0 allocs/op
+BenchmarkTdigest_Quantile/size=1000000/source=exponential/digest=influxdata-8         	 4869811	       247 ns/op	       0 B/op	       0 allocs/op
+BenchmarkTdigest_Quantile/size=1000000/source=exponential/digest=lightcube-8          	 5743305	       208 ns/op	       0 B/op	       0 allocs/op
+BenchmarkTdigest_Quantile/size=1000000/source=exponential/digest=lightflat-8          	 5568716	       206 ns/op	       0 B/op	       0 allocs/op
+BenchmarkTdigest_Quantile/size=1000000/source=normal/digest=caio-8                    	   34358	     35132 ns/op	       0 B/op	       0 allocs/op
+BenchmarkTdigest_Quantile/size=1000000/source=normal/digest=segmentio-8               	 2619296	       457 ns/op	       0 B/op	       0 allocs/op
+BenchmarkTdigest_Quantile/size=1000000/source=normal/digest=influxdata-8              	 4832500	       248 ns/op	       0 B/op	       0 allocs/op
+BenchmarkTdigest_Quantile/size=1000000/source=normal/digest=lightcube-8               	 5597287	       210 ns/op	       0 B/op	       0 allocs/op
+BenchmarkTdigest_Quantile/size=1000000/source=normal/digest=lightflat-8               	 5473999	       212 ns/op	       0 B/op	       0 allocs/op
+BenchmarkTdigest_Quantile/size=1000000/source=tailspike/digest=caio-8                 	   34148	     35378 ns/op	       0 B/op	       0 allocs/op
+BenchmarkTdigest_Quantile/size=1000000/source=tailspike/digest=segmentio-8            	 2608773	       461 ns/op	       0 B/op	       0 allocs/op
+BenchmarkTdigest_Quantile/size=1000000/source=tailspike/digest=influxdata-8           	 4817811	       243 ns/op	       0 B/op	       0 allocs/op
+BenchmarkTdigest_Quantile/size=1000000/source=tailspike/digest=lightcube-8            	 5789082	       210 ns/op	       0 B/op	       0 allocs/op
+BenchmarkTdigest_Quantile/size=1000000/source=tailspike/digest=lightflat-8            	 5752884	       208 ns/op	       0 B/op	       0 allocs/op
 BenchmarkCorrectness/size=1000/source=rand/digest=caio/quantile=0.100000-8            	1000000000	         0.100 %difference
 BenchmarkCorrectness/size=1000/source=rand/digest=caio/quantile=0.500000-8            	1000000000	         0.100 %difference
 BenchmarkCorrectness/size=1000/source=rand/digest=caio/quantile=0.900000-8            	1000000000	         0.100 %difference
@@ -96,11 +116,16 @@ BenchmarkCorrectness/size=1000/source=rand/digest=influxdata/quantile=0.500000-8
 BenchmarkCorrectness/size=1000/source=rand/digest=influxdata/quantile=0.900000-8      	1000000000	         0.140 %difference
 BenchmarkCorrectness/size=1000/source=rand/digest=influxdata/quantile=0.990000-8      	1000000000	         0.149 %difference
 BenchmarkCorrectness/size=1000/source=rand/digest=influxdata/quantile=0.999000-8      	1000000000	         0.150 %difference
-BenchmarkCorrectness/size=1000/source=rand/digest=lightstep/quantile=0.100000-8       	1000000000	         0.0805 %difference
-BenchmarkCorrectness/size=1000/source=rand/digest=lightstep/quantile=0.500000-8       	1000000000	         0.156 %difference
-BenchmarkCorrectness/size=1000/source=rand/digest=lightstep/quantile=0.900000-8       	1000000000	         0.231 %difference
-BenchmarkCorrectness/size=1000/source=rand/digest=lightstep/quantile=0.990000-8       	1000000000	         0.249 %difference
-BenchmarkCorrectness/size=1000/source=rand/digest=lightstep/quantile=0.999000-8       	1000000000	         0.175 %difference
+BenchmarkCorrectness/size=1000/source=rand/digest=lightcube/quantile=0.100000-8       	1000000000	         0.0100 %difference
+BenchmarkCorrectness/size=1000/source=rand/digest=lightcube/quantile=0.500000-8       	1000000000	         0.0501 %difference
+BenchmarkCorrectness/size=1000/source=rand/digest=lightcube/quantile=0.900000-8       	1000000000	         0.0901 %difference
+BenchmarkCorrectness/size=1000/source=rand/digest=lightcube/quantile=0.990000-8       	1000000000	         0.0991 %difference
+BenchmarkCorrectness/size=1000/source=rand/digest=lightcube/quantile=0.999000-8       	1000000000	         0.100 %difference
+BenchmarkCorrectness/size=1000/source=rand/digest=lightflat/quantile=0.100000-8       	1000000000	         0.0100 %difference
+BenchmarkCorrectness/size=1000/source=rand/digest=lightflat/quantile=0.500000-8       	1000000000	         0.0501 %difference
+BenchmarkCorrectness/size=1000/source=rand/digest=lightflat/quantile=0.900000-8       	1000000000	         0.0901 %difference
+BenchmarkCorrectness/size=1000/source=rand/digest=lightflat/quantile=0.990000-8       	1000000000	         0.0991 %difference
+BenchmarkCorrectness/size=1000/source=rand/digest=lightflat/quantile=0.999000-8       	1000000000	         0.100 %difference
 BenchmarkCorrectness/size=1000/source=exponential/digest=caio/quantile=0.100000-8     	1000000000	         0.100 %difference
 BenchmarkCorrectness/size=1000/source=exponential/digest=caio/quantile=0.500000-8     	1000000000	         0.100 %difference
 BenchmarkCorrectness/size=1000/source=exponential/digest=caio/quantile=0.900000-8     	1000000000	         0.100 %difference
@@ -116,11 +141,16 @@ BenchmarkCorrectness/size=1000/source=exponential/digest=influxdata/quantile=0.5
 BenchmarkCorrectness/size=1000/source=exponential/digest=influxdata/quantile=0.900000-8        	1000000000	         0.140 %difference
 BenchmarkCorrectness/size=1000/source=exponential/digest=influxdata/quantile=0.990000-8        	1000000000	         0.149 %difference
 BenchmarkCorrectness/size=1000/source=exponential/digest=influxdata/quantile=0.999000-8        	1000000000	         0.150 %difference
-BenchmarkCorrectness/size=1000/source=exponential/digest=lightstep/quantile=0.100000-8         	1000000000	         0.115 %difference
-BenchmarkCorrectness/size=1000/source=exponential/digest=lightstep/quantile=0.500000-8         	1000000000	         0.170 %difference
-BenchmarkCorrectness/size=1000/source=exponential/digest=lightstep/quantile=0.900000-8         	1000000000	         0.225 %difference
-BenchmarkCorrectness/size=1000/source=exponential/digest=lightstep/quantile=0.990000-8         	1000000000	         0.244 %difference
-BenchmarkCorrectness/size=1000/source=exponential/digest=lightstep/quantile=0.999000-8         	1000000000	         0.175 %difference
+BenchmarkCorrectness/size=1000/source=exponential/digest=lightcube/quantile=0.100000-8         	1000000000	         0.0100 %difference
+BenchmarkCorrectness/size=1000/source=exponential/digest=lightcube/quantile=0.500000-8         	1000000000	         0.0501 %difference
+BenchmarkCorrectness/size=1000/source=exponential/digest=lightcube/quantile=0.900000-8         	1000000000	         0.0901 %difference
+BenchmarkCorrectness/size=1000/source=exponential/digest=lightcube/quantile=0.990000-8         	1000000000	         0.0991 %difference
+BenchmarkCorrectness/size=1000/source=exponential/digest=lightcube/quantile=0.999000-8         	1000000000	         0.100 %difference
+BenchmarkCorrectness/size=1000/source=exponential/digest=lightflat/quantile=0.100000-8         	1000000000	         0.0100 %difference
+BenchmarkCorrectness/size=1000/source=exponential/digest=lightflat/quantile=0.500000-8         	1000000000	         0.0501 %difference
+BenchmarkCorrectness/size=1000/source=exponential/digest=lightflat/quantile=0.900000-8         	1000000000	         0.0901 %difference
+BenchmarkCorrectness/size=1000/source=exponential/digest=lightflat/quantile=0.990000-8         	1000000000	         0.0991 %difference
+BenchmarkCorrectness/size=1000/source=exponential/digest=lightflat/quantile=0.999000-8         	1000000000	         0.100 %difference
 BenchmarkCorrectness/size=1000/source=normal/digest=caio/quantile=0.100000-8                   	1000000000	         0.100 %difference
 BenchmarkCorrectness/size=1000/source=normal/digest=caio/quantile=0.500000-8                   	1000000000	         0.100 %difference
 BenchmarkCorrectness/size=1000/source=normal/digest=caio/quantile=0.900000-8                   	1000000000	         0.100 %difference
@@ -136,11 +166,16 @@ BenchmarkCorrectness/size=1000/source=normal/digest=influxdata/quantile=0.500000
 BenchmarkCorrectness/size=1000/source=normal/digest=influxdata/quantile=0.900000-8             	1000000000	         0.140 %difference
 BenchmarkCorrectness/size=1000/source=normal/digest=influxdata/quantile=0.990000-8             	1000000000	         0.149 %difference
 BenchmarkCorrectness/size=1000/source=normal/digest=influxdata/quantile=0.999000-8             	1000000000	         0.150 %difference
-BenchmarkCorrectness/size=1000/source=normal/digest=lightstep/quantile=0.100000-8              	1000000000	         0.0822 %difference
-BenchmarkCorrectness/size=1000/source=normal/digest=lightstep/quantile=0.500000-8              	1000000000	         0.172 %difference
-BenchmarkCorrectness/size=1000/source=normal/digest=lightstep/quantile=0.900000-8              	1000000000	         0.233 %difference
-BenchmarkCorrectness/size=1000/source=normal/digest=lightstep/quantile=0.990000-8              	1000000000	         0.249 %difference
-BenchmarkCorrectness/size=1000/source=normal/digest=lightstep/quantile=0.999000-8              	1000000000	         0.175 %difference
+BenchmarkCorrectness/size=1000/source=normal/digest=lightcube/quantile=0.100000-8              	1000000000	         0.0100 %difference
+BenchmarkCorrectness/size=1000/source=normal/digest=lightcube/quantile=0.500000-8              	1000000000	         0.0501 %difference
+BenchmarkCorrectness/size=1000/source=normal/digest=lightcube/quantile=0.900000-8              	1000000000	         0.0901 %difference
+BenchmarkCorrectness/size=1000/source=normal/digest=lightcube/quantile=0.990000-8              	1000000000	         0.0991 %difference
+BenchmarkCorrectness/size=1000/source=normal/digest=lightcube/quantile=0.999000-8              	1000000000	         0.100 %difference
+BenchmarkCorrectness/size=1000/source=normal/digest=lightflat/quantile=0.100000-8              	1000000000	         0.0100 %difference
+BenchmarkCorrectness/size=1000/source=normal/digest=lightflat/quantile=0.500000-8              	1000000000	         0.0501 %difference
+BenchmarkCorrectness/size=1000/source=normal/digest=lightflat/quantile=0.900000-8              	1000000000	         0.0901 %difference
+BenchmarkCorrectness/size=1000/source=normal/digest=lightflat/quantile=0.990000-8              	1000000000	         0.0991 %difference
+BenchmarkCorrectness/size=1000/source=normal/digest=lightflat/quantile=0.999000-8              	1000000000	         0.100 %difference
 BenchmarkCorrectness/size=1000/source=tailspike/digest=caio/quantile=0.100000-8                	1000000000	         0.100 %difference
 BenchmarkCorrectness/size=1000/source=tailspike/digest=caio/quantile=0.500000-8                	1000000000	         0.100 %difference
 BenchmarkCorrectness/size=1000/source=tailspike/digest=caio/quantile=0.900000-8                	1000000000	         0.100 %difference
@@ -156,11 +191,16 @@ BenchmarkCorrectness/size=1000/source=tailspike/digest=influxdata/quantile=0.500
 BenchmarkCorrectness/size=1000/source=tailspike/digest=influxdata/quantile=0.900000-8          	1000000000	         0.140 %difference
 BenchmarkCorrectness/size=1000/source=tailspike/digest=influxdata/quantile=0.990000-8          	1000000000	         0.149 %difference
 BenchmarkCorrectness/size=1000/source=tailspike/digest=influxdata/quantile=0.999000-8          	1000000000	         0.150 %difference
-BenchmarkCorrectness/size=1000/source=tailspike/digest=lightstep/quantile=0.100000-8           	1000000000	         0.111 %difference
-BenchmarkCorrectness/size=1000/source=tailspike/digest=lightstep/quantile=0.500000-8           	1000000000	         0.170 %difference
-BenchmarkCorrectness/size=1000/source=tailspike/digest=lightstep/quantile=0.900000-8           	1000000000	         0.234 %difference
-BenchmarkCorrectness/size=1000/source=tailspike/digest=lightstep/quantile=0.990000-8           	1000000000	         0.248 %difference
-BenchmarkCorrectness/size=1000/source=tailspike/digest=lightstep/quantile=0.999000-8           	1000000000	         0.175 %difference
+BenchmarkCorrectness/size=1000/source=tailspike/digest=lightcube/quantile=0.100000-8           	1000000000	         0.0100 %difference
+BenchmarkCorrectness/size=1000/source=tailspike/digest=lightcube/quantile=0.500000-8           	1000000000	         0.0501 %difference
+BenchmarkCorrectness/size=1000/source=tailspike/digest=lightcube/quantile=0.900000-8           	1000000000	         0.0901 %difference
+BenchmarkCorrectness/size=1000/source=tailspike/digest=lightcube/quantile=0.990000-8           	1000000000	         0.0991 %difference
+BenchmarkCorrectness/size=1000/source=tailspike/digest=lightcube/quantile=0.999000-8           	1000000000	         0.100 %difference
+BenchmarkCorrectness/size=1000/source=tailspike/digest=lightflat/quantile=0.100000-8           	1000000000	         0.0100 %difference
+BenchmarkCorrectness/size=1000/source=tailspike/digest=lightflat/quantile=0.500000-8           	1000000000	         0.0501 %difference
+BenchmarkCorrectness/size=1000/source=tailspike/digest=lightflat/quantile=0.900000-8           	1000000000	         0.0901 %difference
+BenchmarkCorrectness/size=1000/source=tailspike/digest=lightflat/quantile=0.990000-8           	1000000000	         0.0991 %difference
+BenchmarkCorrectness/size=1000/source=tailspike/digest=lightflat/quantile=0.999000-8           	1000000000	         0.100 %difference
 BenchmarkCorrectness/size=1000000/source=rand/digest=caio/quantile=0.100000-8                  	1000000000	        -0.000393 %difference
 BenchmarkCorrectness/size=1000000/source=rand/digest=caio/quantile=0.500000-8                  	1000000000	        -0.000523 %difference
 BenchmarkCorrectness/size=1000000/source=rand/digest=caio/quantile=0.900000-8                  	1000000000	         0.000397 %difference
@@ -176,11 +216,16 @@ BenchmarkCorrectness/size=1000000/source=rand/digest=influxdata/quantile=0.50000
 BenchmarkCorrectness/size=1000000/source=rand/digest=influxdata/quantile=0.900000-8            	1000000000	         0.000054 %difference
 BenchmarkCorrectness/size=1000000/source=rand/digest=influxdata/quantile=0.990000-8            	1000000000	         0.000184 %difference
 BenchmarkCorrectness/size=1000000/source=rand/digest=influxdata/quantile=0.999000-8            	1000000000	         0.000030 %difference
-BenchmarkCorrectness/size=1000000/source=rand/digest=lightstep/quantile=0.100000-8             	1000000000	        -0.00665 %difference
-BenchmarkCorrectness/size=1000000/source=rand/digest=lightstep/quantile=0.500000-8             	1000000000	         0.295 %difference
-BenchmarkCorrectness/size=1000000/source=rand/digest=lightstep/quantile=0.900000-8             	1000000000	        -0.357 %difference
-BenchmarkCorrectness/size=1000000/source=rand/digest=lightstep/quantile=0.990000-8             	1000000000	        -0.0537 %difference
-BenchmarkCorrectness/size=1000000/source=rand/digest=lightstep/quantile=0.999000-8             	1000000000	         0.0229 %difference
+BenchmarkCorrectness/size=1000000/source=rand/digest=lightcube/quantile=0.100000-8             	1000000000	         0.796 %difference
+BenchmarkCorrectness/size=1000000/source=rand/digest=lightcube/quantile=0.500000-8             	1000000000	         0.872 %difference
+BenchmarkCorrectness/size=1000000/source=rand/digest=lightcube/quantile=0.900000-8             	1000000000	         0.354 %difference
+BenchmarkCorrectness/size=1000000/source=rand/digest=lightcube/quantile=0.990000-8             	1000000000	         0.146 %difference
+BenchmarkCorrectness/size=1000000/source=rand/digest=lightcube/quantile=0.999000-8             	1000000000	         0.0533 %difference
+BenchmarkCorrectness/size=1000000/source=rand/digest=lightflat/quantile=0.100000-8             	1000000000	         0.796 %difference
+BenchmarkCorrectness/size=1000000/source=rand/digest=lightflat/quantile=0.500000-8             	1000000000	         0.872 %difference
+BenchmarkCorrectness/size=1000000/source=rand/digest=lightflat/quantile=0.900000-8             	1000000000	         0.354 %difference
+BenchmarkCorrectness/size=1000000/source=rand/digest=lightflat/quantile=0.990000-8             	1000000000	         0.146 %difference
+BenchmarkCorrectness/size=1000000/source=rand/digest=lightflat/quantile=0.999000-8             	1000000000	         0.0533 %difference
 BenchmarkCorrectness/size=1000000/source=exponential/digest=caio/quantile=0.100000-8           	1000000000	         0.000089 %difference
 BenchmarkCorrectness/size=1000000/source=exponential/digest=caio/quantile=0.500000-8           	1000000000	         0.00147 %difference
 BenchmarkCorrectness/size=1000000/source=exponential/digest=caio/quantile=0.900000-8           	1000000000	         0.000330 %difference
@@ -196,11 +241,16 @@ BenchmarkCorrectness/size=1000000/source=exponential/digest=influxdata/quantile=
 BenchmarkCorrectness/size=1000000/source=exponential/digest=influxdata/quantile=0.900000-8     	1000000000	         0.00202 %difference
 BenchmarkCorrectness/size=1000000/source=exponential/digest=influxdata/quantile=0.990000-8     	1000000000	        -0.00108 %difference
 BenchmarkCorrectness/size=1000000/source=exponential/digest=influxdata/quantile=0.999000-8     	1000000000	         0.00134 %difference
-BenchmarkCorrectness/size=1000000/source=exponential/digest=lightstep/quantile=0.100000-8      	1000000000	         0.280 %difference
-BenchmarkCorrectness/size=1000000/source=exponential/digest=lightstep/quantile=0.500000-8      	1000000000	        -0.177 %difference
-BenchmarkCorrectness/size=1000000/source=exponential/digest=lightstep/quantile=0.900000-8      	1000000000	        -0.367 %difference
-BenchmarkCorrectness/size=1000000/source=exponential/digest=lightstep/quantile=0.990000-8      	1000000000	        -0.113 %difference
-BenchmarkCorrectness/size=1000000/source=exponential/digest=lightstep/quantile=0.999000-8      	1000000000	         0.000922 %difference
+BenchmarkCorrectness/size=1000000/source=exponential/digest=lightcube/quantile=0.100000-8      	1000000000	         0.257 %difference
+BenchmarkCorrectness/size=1000000/source=exponential/digest=lightcube/quantile=0.500000-8      	1000000000	        -0.574 %difference
+BenchmarkCorrectness/size=1000000/source=exponential/digest=lightcube/quantile=0.900000-8      	1000000000	        -0.389 %difference
+BenchmarkCorrectness/size=1000000/source=exponential/digest=lightcube/quantile=0.990000-8      	1000000000	        -0.221 %difference
+BenchmarkCorrectness/size=1000000/source=exponential/digest=lightcube/quantile=0.999000-8      	1000000000	        -0.0248 %difference
+BenchmarkCorrectness/size=1000000/source=exponential/digest=lightflat/quantile=0.100000-8      	1000000000	         0.257 %difference
+BenchmarkCorrectness/size=1000000/source=exponential/digest=lightflat/quantile=0.500000-8      	1000000000	        -0.574 %difference
+BenchmarkCorrectness/size=1000000/source=exponential/digest=lightflat/quantile=0.900000-8      	1000000000	        -0.389 %difference
+BenchmarkCorrectness/size=1000000/source=exponential/digest=lightflat/quantile=0.990000-8      	1000000000	        -0.221 %difference
+BenchmarkCorrectness/size=1000000/source=exponential/digest=lightflat/quantile=0.999000-8      	1000000000	        -0.0248 %difference
 BenchmarkCorrectness/size=1000000/source=normal/digest=caio/quantile=0.100000-8                	1000000000	         0.000083 %difference
 BenchmarkCorrectness/size=1000000/source=normal/digest=caio/quantile=0.500000-8                	1000000000	        -0.000097 %difference
 BenchmarkCorrectness/size=1000000/source=normal/digest=caio/quantile=0.900000-8                	1000000000	        -0.000160 %difference
@@ -216,11 +266,16 @@ BenchmarkCorrectness/size=1000000/source=normal/digest=influxdata/quantile=0.500
 BenchmarkCorrectness/size=1000000/source=normal/digest=influxdata/quantile=0.900000-8          	1000000000	        -0.000155 %difference
 BenchmarkCorrectness/size=1000000/source=normal/digest=influxdata/quantile=0.990000-8          	1000000000	         0.000782 %difference
 BenchmarkCorrectness/size=1000000/source=normal/digest=influxdata/quantile=0.999000-8          	1000000000	         0.000520 %difference
-BenchmarkCorrectness/size=1000000/source=normal/digest=lightstep/quantile=0.100000-8           	1000000000	        -0.0176 %difference
-BenchmarkCorrectness/size=1000000/source=normal/digest=lightstep/quantile=0.500000-8           	1000000000	        -0.502 %difference
-BenchmarkCorrectness/size=1000000/source=normal/digest=lightstep/quantile=0.900000-8           	1000000000	         0.133 %difference
-BenchmarkCorrectness/size=1000000/source=normal/digest=lightstep/quantile=0.990000-8           	1000000000	         0.0371 %difference
-BenchmarkCorrectness/size=1000000/source=normal/digest=lightstep/quantile=0.999000-8           	1000000000	         0.0422 %difference
+BenchmarkCorrectness/size=1000000/source=normal/digest=lightcube/quantile=0.100000-8           	1000000000	        -0.335 %difference
+BenchmarkCorrectness/size=1000000/source=normal/digest=lightcube/quantile=0.500000-8           	1000000000	        -2.15 %difference
+BenchmarkCorrectness/size=1000000/source=normal/digest=lightcube/quantile=0.900000-8           	1000000000	        -0.688 %difference
+BenchmarkCorrectness/size=1000000/source=normal/digest=lightcube/quantile=0.990000-8           	1000000000	        -0.163 %difference
+BenchmarkCorrectness/size=1000000/source=normal/digest=lightcube/quantile=0.999000-8           	1000000000	        -0.0224 %difference
+BenchmarkCorrectness/size=1000000/source=normal/digest=lightflat/quantile=0.100000-8           	1000000000	        -0.335 %difference
+BenchmarkCorrectness/size=1000000/source=normal/digest=lightflat/quantile=0.500000-8           	1000000000	        -2.15 %difference
+BenchmarkCorrectness/size=1000000/source=normal/digest=lightflat/quantile=0.900000-8           	1000000000	        -0.688 %difference
+BenchmarkCorrectness/size=1000000/source=normal/digest=lightflat/quantile=0.990000-8           	1000000000	        -0.163 %difference
+BenchmarkCorrectness/size=1000000/source=normal/digest=lightflat/quantile=0.999000-8           	1000000000	        -0.0224 %difference
 BenchmarkCorrectness/size=1000000/source=tailspike/digest=caio/quantile=0.100000-8             	1000000000	         0.000435 %difference
 BenchmarkCorrectness/size=1000000/source=tailspike/digest=caio/quantile=0.500000-8             	1000000000	        -0.00142 %difference
 BenchmarkCorrectness/size=1000000/source=tailspike/digest=caio/quantile=0.900000-8             	1000000000	        -0.000045 %difference
@@ -236,10 +291,15 @@ BenchmarkCorrectness/size=1000000/source=tailspike/digest=influxdata/quantile=0.
 BenchmarkCorrectness/size=1000000/source=tailspike/digest=influxdata/quantile=0.900000-8       	1000000000	        -0.0216 %difference
 BenchmarkCorrectness/size=1000000/source=tailspike/digest=influxdata/quantile=0.990000-8       	1000000000	        -0.00136 %difference
 BenchmarkCorrectness/size=1000000/source=tailspike/digest=influxdata/quantile=0.999000-8       	1000000000	        -0.000493 %difference
-BenchmarkCorrectness/size=1000000/source=tailspike/digest=lightstep/quantile=0.100000-8        	1000000000	         0.266 %difference
-BenchmarkCorrectness/size=1000000/source=tailspike/digest=lightstep/quantile=0.500000-8        	1000000000	         0.186 %difference
-BenchmarkCorrectness/size=1000000/source=tailspike/digest=lightstep/quantile=0.900000-8        	1000000000	        -0.0216 %difference
-BenchmarkCorrectness/size=1000000/source=tailspike/digest=lightstep/quantile=0.990000-8        	1000000000	         0.144 %difference
-BenchmarkCorrectness/size=1000000/source=tailspike/digest=lightstep/quantile=0.999000-8        	1000000000	        -0.00870 %difference
+BenchmarkCorrectness/size=1000000/source=tailspike/digest=lightcube/quantile=0.100000-8        	1000000000	        -0.00969 %difference
+BenchmarkCorrectness/size=1000000/source=tailspike/digest=lightcube/quantile=0.500000-8        	1000000000	         0.0739 %difference
+BenchmarkCorrectness/size=1000000/source=tailspike/digest=lightcube/quantile=0.900000-8        	1000000000	         0.0945 %difference
+BenchmarkCorrectness/size=1000000/source=tailspike/digest=lightcube/quantile=0.990000-8        	1000000000	         0.0991 %difference
+BenchmarkCorrectness/size=1000000/source=tailspike/digest=lightcube/quantile=0.999000-8        	1000000000	         0.00900 %difference
+BenchmarkCorrectness/size=1000000/source=tailspike/digest=lightflat/quantile=0.100000-8        	1000000000	        -0.00969 %difference
+BenchmarkCorrectness/size=1000000/source=tailspike/digest=lightflat/quantile=0.500000-8        	1000000000	         0.0739 %difference
+BenchmarkCorrectness/size=1000000/source=tailspike/digest=lightflat/quantile=0.900000-8        	1000000000	         0.0945 %difference
+BenchmarkCorrectness/size=1000000/source=tailspike/digest=lightflat/quantile=0.990000-8        	1000000000	         0.0991 %difference
+BenchmarkCorrectness/size=1000000/source=tailspike/digest=lightflat/quantile=0.999000-8        	1000000000	         0.00900 %difference
 PASS
-ok  	github.com/jmacd/tdigestbench	179.597s
+ok  	github.com/jmacd/tdigestbench	197.842s
